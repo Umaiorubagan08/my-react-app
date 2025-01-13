@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-react-app/static/css/main.d3e60d46.css",
-    "main.js": "/my-react-app/static/js/main.04e03920.js",
+    "main.js": "/my-react-app/static/js/main.682fad76.js",
     "blueprint-icons-all-paths-loader.js": "/my-react-app/static/js/blueprint-icons-all-paths-loader.c1c102f3.chunk.js",
     "blueprint-icons-split-paths-by-size-loader.js": "/my-react-app/static/js/blueprint-icons-split-paths-by-size-loader.d777003c.chunk.js",
     "blueprint-icons-all-paths.js": "/my-react-app/static/js/blueprint-icons-all-paths.fe530281.chunk.js",
@@ -10,7 +10,7 @@
     "static/media/1.png": "/my-react-app/static/media/1.0135277c00c5fb5fd45e.png",
     "index.html": "/my-react-app/index.html",
     "main.d3e60d46.css.map": "/my-react-app/static/css/main.d3e60d46.css.map",
-    "main.04e03920.js.map": "/my-react-app/static/js/main.04e03920.js.map",
+    "main.682fad76.js.map": "/my-react-app/static/js/main.682fad76.js.map",
     "blueprint-icons-all-paths-loader.c1c102f3.chunk.js.map": "/my-react-app/static/js/blueprint-icons-all-paths-loader.c1c102f3.chunk.js.map",
     "blueprint-icons-split-paths-by-size-loader.d777003c.chunk.js.map": "/my-react-app/static/js/blueprint-icons-split-paths-by-size-loader.d777003c.chunk.js.map",
     "blueprint-icons-all-paths.fe530281.chunk.js.map": "/my-react-app/static/js/blueprint-icons-all-paths.fe530281.chunk.js.map",
@@ -19,6 +19,6 @@
   },
   "entrypoints": [
     "static/css/main.d3e60d46.css",
-    "static/js/main.04e03920.js"
+    "static/js/main.682fad76.js"
   ]
 }
