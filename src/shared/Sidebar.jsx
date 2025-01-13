@@ -7,26 +7,26 @@ import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS } from "../lib/
 export default function Sidebar() {
     return (
         <div className="sidebar-container">
-            {/* Header */}
+            {/* header */}
             <div className="sidebar-header">
                 <FcBusinessman className="sidebar-logo" />
                 <span className="sidebar-title"> EmpHub </span>
             </div>
 
-            {/* Main Links */}
+            {/* main links */}
             <div className="sidebar-links">
                 {DASHBOARD_SIDEBAR_LINKS.map((item) => (
                     <SidebarLink key={item.key} item={item} />
                 ))}
             </div>
 
-            {/* Bottom Links */}
+            {/* bottom links */}
             <div className="sidebar-bottom-links">
                 {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((item) => (
                     <SidebarLink key={item.key} item={item} />
                 ))}
 
-                {/* Logout */}
+                {/* logout */}
                 <Link to="/logout" className="sidebar-logout">
                     <HiOutlineLogout className="sidebar-icon" />
                     <span>Logout</span>

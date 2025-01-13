@@ -1,33 +1,32 @@
 import React from 'react';
 
 const departments = [
-    { id: 1, name: "HR", manager: "Ganesan", employeeCount: 20 },
-    { id: 2, name: "Development", manager: "Muthukumaran", employeeCount: 50 },
-    { id: 3, name: "Marketing", manager: "Manoj", employeeCount: 30 },
-    { id: 4, name: "Sales", manager: "Kelvin", employeeCount: 25 },
-    { id: 5, name: "IT", manager: "Balaji", employeeCount: 15 },
+    { id: 1, name: "HR", manager: "Ravi", employeeCount: 20 },
+    { id: 2, name: "Development", manager: "Ganesh", employeeCount: 50 },
+    { id: 3, name: "Marketing", manager: "Don Inigo", employeeCount: 30 },
+    { id: 4, name: "Sales", manager: "Ram", employeeCount: 25 },
+    { id: 5, name: "IT", manager: "Aanand", employeeCount: 15 },
 ];
 
 export default function Department() {
-    // Function to assign background color based on the department name
     const getRowColor = (departmentName) => {
         switch(departmentName) {
             case 'HR':
-                return '#f7c1c1';  // Light Red for HR
+                return '#f7c1c1';  
             case 'Development':
-                return '#d1f7c1';  // Light Green for Development
+                return '#d1f7c1';  
             case 'Marketing':
-                return '#c1d9f7';  // Light Blue for Marketing
+                return '#c1d9f7';  
             case 'Sales':
-                return '#f7e1a1';  // Light Yellow for Sales
+                return '#f7e1a1';  
             case 'IT':
-                return '#d1c1f7';  // Light Purple for IT
+                return '#d1c1f7';  
             default:
-                return '#ffffff';  // Default white for other departments
+                return '#ffffff';
         }
     };
 
-    return (
+    return ( //Inline css
         <div style={{
             padding: "30px", 
             fontFamily: "Poppins, sans-serif", 
@@ -99,7 +98,7 @@ export default function Department() {
                 <tbody>
                     {departments.map(department => (
                         <tr key={department.id} style={{
-                            backgroundColor: getRowColor(department.name), // Set dynamic row color
+                            backgroundColor: getRowColor(department.name), 
                             transition: "background-color 0.3s ease"
                         }}>
                             <td style={{

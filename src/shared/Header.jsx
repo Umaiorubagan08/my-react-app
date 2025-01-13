@@ -4,8 +4,8 @@ import { AiOutlineHome, AiOutlineHeart } from "react-icons/ai";
 import { FiUser, FiLogOut } from "react-icons/fi";
 import { BsFolder } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import "./Header.css"; // Import CSS
-import profileImage from "./img/1.png"; // Adjust path as needed
+import "./Header.css"; 
+import profileImage from "./img/1.png"; 
 
 export default function Header() {
   const [profileOpen, setProfileOpen] = useState(false);
@@ -13,14 +13,34 @@ export default function Header() {
     { id: 1, message: "New message from manager", read: false },
     { id: 2, message: "The meeting is scheduled for 25th December.", read: false },
     { id: 3, message: "New message from Karan", read: false },
+    { id: 4, message: "New message from Prakash", read: true },
+    { id: 5, message: "New message from Ganapathi", read: false },
+    { id: 6, message: "Reminder: Submit the report by Friday", read: false },
+    { id: 7, message: "New message from HR regarding benefits", read: true },
+    { id: 8, message: "Team lunch tomorrow at 1 PM", read: false },
+    { id: 9, message: "Follow up on pending approval", read: false },
+    { id: 10, message: "New message from Director", read: true }
   ]);
+  
   const [notifications, setNotifications] = useState([
     { id: 1, message: "Report has been recorded", read: false },
     { id: 2, message: "Successfully completed the task", read: false },
+    { id: 3, message: "New update is available", read: false },
+    { id: 4, message: "System maintenance scheduled for tomorrow", read: false },
+    { id: 5, message: "New version of the software is released", read: true },
+    { id: 6, message: "New project deadline set for next week", read: false },
+    { id: 7, message: "Server backup completed successfully", read: true },
+    { id: 8, message: "New file uploaded by the manager", read: false },
+    { id: 9, message: "Task priority has been updated", read: false },
+    { id: 10, message: "New comment on your task", read: false }
   ]);
+
   const [showMessages, setShowMessages] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
 
+
+
+  // Online material is avaliable for this message style
   const navigate = useNavigate();
 
   const toggleProfileMenu = () => {
@@ -64,7 +84,7 @@ export default function Header() {
   return (
     <div className="header-container">
       <div className="header-logo" onClick={() => navigate("/")}>
-        <h1>         Hello, Umaiorubagan        </h1>
+        <h1> Hello, Umaiorubagan  </h1>
       </div>
       <div className="header-icons">
         <button

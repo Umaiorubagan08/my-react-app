@@ -1,6 +1,4 @@
-
-
-
+// react icons are must be imported
 import {
     HiOutlineViewGrid,
     HiHome,

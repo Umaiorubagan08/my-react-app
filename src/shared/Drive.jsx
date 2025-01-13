@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Drive() {
+  // Document data
   const documents = [
     {
       title: "Employee Handbook",
@@ -58,6 +59,7 @@ export default function Drive() {
     }
   ];
 
+  // Event handlers
   const handleView = (docTitle) => {
     alert(`Viewing document: ${docTitle}`);
   };
@@ -66,6 +68,7 @@ export default function Drive() {
     alert(`Downloading document: ${docTitle}`);
   };
 
+  // Styles
   const styles = {
     container: {
       backgroundColor: "#f9f9f9",
@@ -74,22 +77,20 @@ export default function Drive() {
       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
       width: "90%",
       margin: "auto",
-      textAlign: "center",
       maxWidth: "1200px",
-      overflowY: "auto", // Allow vertical scrolling if needed
-      height: "80vh" // Limits the height and adds scrolling functionality
+      height: "80vh",
+      overflowY: "auto"
     },
     title: {
-      fontFamily: "'Arial', sans-serif",
       fontSize: "2.5rem",
       color: "#333",
-      marginBottom: "30px"
+      marginBottom: "30px",
+      textAlign: "center"
     },
     documentList: {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-      gap: "20px",
-      padding: "0 20px" // Adds padding for better spacing
+      gap: "20px"
     },
     documentCard: {
       backgroundColor: "#fff",
@@ -99,36 +100,23 @@ export default function Drive() {
       transition: "transform 0.3s, box-shadow 0.3s",
       cursor: "pointer",
       textAlign: "left",
-      height: "auto",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between"
     },
-    documentCardHover: {
-      transform: "translateY(-5px)",
-      boxShadow: "0 6px 12px rgba(0, 0, 0, 0.2)"
-    },
     documentTitle: {
-      fontSize: "1.6rem",
+      fontSize: "1.5rem",
       fontWeight: "bold",
       color: "#333"
     },
     documentDescription: {
       fontSize: "1rem",
       color: "#555",
-      marginTop: "10px",
-      height: "60px",
-      overflow: "hidden", // Prevent long descriptions from overflowing
+      margin: "10px 0"
     },
-    documentType: {
+    documentMeta: {
       fontSize: "0.9rem",
-      color: "#777",
-      marginTop: "5px",
-    },
-    documentDate: {
-      fontSize: "0.9rem",
-      color: "#777",
-      marginTop: "5px",
+      color: "#777"
     },
     documentActions: {
       display: "flex",
@@ -145,10 +133,20 @@ export default function Drive() {
       fontSize: "1rem",
       transition: "background-color 0.3s"
     },
-    actionBtnHover: {
-      backgroundColor: "#0056b3"
-    }
+    actionBtnHover: "#0056b3"
   };
+
+  // Reusable button component
+  const Button = ({ label, onClick }) => (
+    <button
+      style={styles.actionBtn}
+      onMouseOver={(e) => (e.target.style.backgroundColor = styles.actionBtnHover)}
+      onMouseOut={(e) => (e.target.style.backgroundColor = styles.actionBtn.backgroundColor)}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
 
   return (
     <div style={styles.container}>
@@ -158,30 +156,16 @@ export default function Drive() {
           <div
             key={index}
             style={styles.documentCard}
-            onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-5px)"}
-            onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
+            onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+            onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
           >
             <h2 style={styles.documentTitle}>{doc.title}</h2>
             <p style={styles.documentDescription}>{doc.description}</p>
-            <p style={styles.documentType}>Type: {doc.type}</p>
-            <p style={styles.documentDate}>Date: {doc.date}</p>
+            <p style={styles.documentMeta}>Type: {doc.type}</p>
+            <p style={styles.documentMeta}>Date: {doc.date}</p>
             <div style={styles.documentActions}>
-              <button
-                style={styles.actionBtn}
-                onMouseOver={(e) => e.currentTarget.style.backgroundColor = styles.actionBtnHover.backgroundColor}
-                onMouseOut={(e) => e.currentTarget.style.backgroundColor = styles.actionBtn.backgroundColor}
-                onClick={() => handleView(doc.title)}
-              >
-                View
-              </button>
-              <button
-                style={styles.actionBtn}
-                onMouseOver={(e) => e.currentTarget.style.backgroundColor = styles.actionBtnHover.backgroundColor}
-                onMouseOut={(e) => e.currentTarget.style.backgroundColor = styles.actionBtn.backgroundColor}
-                onClick={() => handleDownload(doc.title)}
-              >
-                Download
-              </button>
+              <Button label="View" onClick={() => handleView(doc.title)} />
+              <Button label="Download" onClick={() => handleDownload(doc.title)} />
             </div>
           </div>
         ))}

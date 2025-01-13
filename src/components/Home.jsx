@@ -1,23 +1,202 @@
 import React, { useState } from "react";
+import "./Home.css"; 
 
 export default function Home() {
     const [employees, setEmployees] = useState([
-        { id: 1, name: "Muthukumar S.H", position: "Founder and CEO" },
-        { id: 2, name: "Ganesan", position: "Full Stack Developer" },
-        { id: 3, name: "Balaji", position: "Junior Front-end Developer" },
-        { id: 4, name: "Thenmozhi", position: "Data Analyst" },
-        { id: 5, name: "Prakash", position: "Python Developer" },
-        { id: 6, name: "Ramar", position: "Embedded Developer" },
-        { id: 7, name: "Shree", position: "C++ Developer" },
-        { id: 8, name: "Manoji", position: "Back-end Developer" },
-        { id: 9, name: "Ganapathi", position: "VLSI Designer" },
-        { id: 10, name: "Riya", position: "UI/UX Designer" },
+        {
+            id: 1,
+            name: "Muthukumar S.H",
+            position: "Founder and CEO",
+            tasks: [
+                { taskId: 1, task: "(1) Strategize Q1 Goals", status: "Incomplete", deadline: "2025-01-15" },
+                { taskId: 2, task: "(2) Conduct Meeting with Partners", status: "Complete", deadline: "2025-01-20" },
+            ],
+        },
+        {
+            id: 2,
+            name: "Ganesan",
+            position: "Full Stack Developer",
+            tasks: [
+                { taskId: 3, task: "(1) Develop Backend API", status: "Incomplete", deadline: "2025-02-10" },
+                { taskId: 4, task: "(2) Integrate Payment Gateway", status: "Incomplete", deadline: "2025-02-25" },
+            ],
+        },
+        {
+            id: 3,
+            name: "Balaji",
+            position: "Junior Front-end Developer",
+            tasks: [
+                { taskId: 5, task: "(1) Develop UI for Dashboard", status: "Incomplete", deadline: "2025-02-05" },
+                { taskId: 6, task: "(2) Fix UI Bugs", status: "Complete", deadline: "2025-01-10" },
+            ],
+        },
+        {
+            id: 4,
+            name: "Prakash Raj",
+            position: "HR Manager",
+            tasks: [
+                { taskId: 7, task: "(1) Schedule Interviews", status: "Incomplete", deadline: "2025-01-12" },
+                { taskId: 8, task: "(2) Review Employee Benefits", status: "Incomplete", deadline: "2025-01-18" },
+            ],
+        },
+        {
+            id: 5,
+            name: "Manoj",
+            position: "Python Developer",
+            tasks: [
+                { taskId: 9, task: "(1) Maintaing the code", status: "Incomplete", deadline: "2025-01-30" },
+                { taskId: 10, task: "(2) Coordinate with backend developer", status: "Complete", deadline: "2025-01-22" },
+            ],
+        },
+        {
+            id: 6,
+            name: "Ramkumar",
+            position: "Manager",
+            tasks: [
+                { taskId: 11, task: "(1) Schedule Interviews", status: "Incomplete", deadline: "2025-01-12" },
+                { taskId: 12, task: "(2) Review Employee Benefits", status: "Incomplete", deadline: "2025-01-18" },
+            ],
+        },
+        {
+            id: 7,
+            name: "Kumar",
+            position: "IT Support",
+            tasks: [
+                { taskId: 11, task: "(1) Schedule Interviews for Fresher Candidates", status: "Incomplete", deadline: "2025-01-12" },
+                { taskId: 12, task: "(2) Review The Documents", status: "Incomplete", deadline: "2025-01-18" },
+            ],
+        },
+        {
+            id: 8,
+            name: "Divya R.",
+            position: "Marketing Manager",
+            tasks: [
+                { taskId: 13, task: "(1) Create Marketing Campaign", status: "Incomplete", deadline: "2025-02-15" },
+                { taskId: 14, task: "(2) Analyze Customer Feedback", status: "Incomplete", deadline: "2025-02-20" },
+            ],
+        },
+        {
+            id: 9,
+            name: "Harish Kumar",
+            position: "Product Manager",
+            tasks: [
+                { taskId: 15, task: "(1) Define Product Roadmap", status: "Incomplete", deadline: "2025-02-10" },
+                { taskId: 16, task: "(2) Coordinate with Design Team", status: "Complete", deadline: "2025-01-25" },
+            ],
+        },
+        {
+            id: 10,
+            name: "Swetha",
+            position: "UI/UX Designer",
+            tasks: [
+                { taskId: 17, task: "(1) Design Wireframes for New Feature", status: "Incomplete", deadline: "2025-02-05" },
+                { taskId: 18, task: "(2) Create UI Mockups", status: "Incomplete", deadline: "2025-02-12" },
+            ],
+        },
+        {
+            id: 11,
+            name: "Vishnu",
+            position: "Data Scientist",
+            tasks: [
+                { taskId: 19, task: "(1) Analyze Data Trends", status: "Incomplete", deadline: "2025-02-25" },
+                { taskId: 20, task: "(2) Build Predictive Model", status: "Incomplete", deadline: "2025-03-05" },
+            ],
+        },
+        {
+            id: 12,
+            name: "Ravi Kumar",
+            position: "DevOps Engineer",
+            tasks: [
+                { taskId: 21, task: "(1) Set up Continuous Integration Pipeline", status: "Incomplete", deadline: "2025-02-18" },
+                { taskId: 22, task: "(2) Manage Cloud Infrastructure", status: "Complete", deadline: "2025-01-30" },
+            ],
+        },
+        {
+            id: 13,
+            name: "Sangeetha",
+            position: "Quality Assurance Engineer",
+            tasks: [
+                { taskId: 23, task: "(1) Write Test Cases", status: "Incomplete", deadline: "2025-02-20" },
+                { taskId: 24, task: "(2) Perform Regression Testing", status: "Incomplete", deadline: "2025-03-01" },
+            ],
+        },
+        {
+            id: 14,
+            name: "Anjali",
+            position: "Business Analyst",
+            tasks: [
+                { taskId: 25, task: "(1) Gather Business Requirements", status: "Incomplete", deadline: "2025-02-10" },
+                { taskId: 26, task: "(2) Prepare Requirement Document", status: "Incomplete", deadline: "2025-02-15" },
+            ],
+        },
+        {
+            id: 15,
+            name: "Rajesh",
+            position: "Software Engineer",
+            tasks: [
+                { taskId: 27, task: "(1) Develop Authentication System", status: "Incomplete", deadline: "2025-02-20" },
+                { taskId: 28, task: "(2) Fix Security Vulnerabilities", status: "Incomplete", deadline: "2025-02-25" },
+            ],
+        },
+        {
+            id: 16,
+            name: "Aarthi",
+            position: "Content Writer",
+            tasks: [
+                { taskId: 29, task: "(1) Write Technical Blog Post", status: "Incomplete", deadline: "2025-01-25" },
+                { taskId: 30, task: "(2) Create Product Descriptions", status: "Incomplete", deadline: "2025-02-05" },
+            ],
+        },
+        {
+            id: 17,
+            name: "Nithya",
+            position: "SEO Specialist",
+            tasks: [
+                { taskId: 31, task: "(1) Optimize Website Content", status: "Incomplete", deadline: "2025-02-10" },
+                { taskId: 32, task: "(2) Track Keyword Performance", status: "Incomplete", deadline: "2025-02-15" },
+            ],
+        },
+        {
+            id: 18,
+            name: "Deepak",
+            position: "System Administrator",
+            tasks: [
+                { taskId: 33, task: "(1) Maintain Server Uptime", status: "Incomplete", deadline: "2025-01-30" },
+                { taskId: 34, task: "(2) Install System Updates", status: "Incomplete", deadline: "2025-02-05" },
+            ],
+        },
+        {
+            id: 19,
+            name: "Saranya",
+            position: "Customer Support",
+            tasks: [
+                { taskId: 35, task: "(1) Assist Customers with Inquiries", status: "Incomplete", deadline: "2025-01-15" },
+                { taskId: 36, task: "(2) Resolve Customer Issues", status: "Incomplete", deadline: "2025-01-25" },
+            ],
+        },
+        {
+            id: 20,
+            name: "Praveen",
+            position: "Sales Executive",
+            tasks: [
+                { taskId: 37, task: "(1) Reach Out to Potential Clients", status: "Incomplete", deadline: "2025-02-10" },
+                { taskId: 38, task: "(2) Prepare Sales Presentations", status: "Incomplete", deadline: "2025-02-20" },
+            ],
+        },
+        
+        
     ]);
+
     const [newEmployee, setNewEmployee] = useState({ name: "", position: "" });
+    const [newTask, setNewTask] = useState({ employeeId: "", task: "", deadline: "" });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setNewEmployee({ ...newEmployee, [name]: value });
+        if (name === "name" || name === "position") {
+            setNewEmployee({ ...newEmployee, [name]: value });
+        } else {
+            setNewTask({ ...newTask, [name]: value });
+        }
     };
 
     const handleAddEmployee = (e) => {
@@ -25,116 +204,239 @@ export default function Home() {
         if (newEmployee.name && newEmployee.position) {
             setEmployees([
                 ...employees,
-                { id: employees.length + 1, ...newEmployee },
+                { id: employees.length + 1, ...newEmployee, tasks: [] },
             ]);
             setNewEmployee({ name: "", position: "" });
         }
     };
 
+    const handleAddTask = (e) => {
+        e.preventDefault();
+        if (newTask.employeeId && newTask.task && newTask.deadline) {
+            setEmployees((prevState) =>
+                prevState.map((employee) =>
+                    employee.id === parseInt(newTask.employeeId)
+                        ? {
+                              ...employee,
+                              tasks: [
+                                  ...employee.tasks,
+                                  {
+                                      taskId: employee.tasks.length + 1,
+                                      task: newTask.task,
+                                      status: "Incomplete",
+                                      deadline: newTask.deadline,
+                                  },
+                              ],
+                          }
+                        : employee
+                )
+            );
+            setNewTask({ employeeId: "", task: "", deadline: "" });
+        }
+    };
+
+    const handleMarkTaskComplete = (employeeId, taskId) => {
+        setEmployees((prevState) =>
+            prevState.map((employee) =>
+                employee.id === employeeId
+                    ? {
+                          ...employee,
+                          tasks: employee.tasks.map((task) =>
+                              task.taskId === taskId
+                                  ? { ...task, status: task.status === "Incomplete" ? "Complete" : "Incomplete" }
+                                  : task
+                          ),
+                      }
+                    : employee
+            )
+        );
+    };
+
+    // Main Content for home-container
+
     return (
-        <div className="h-screen flex flex-col bg-gradient-to-r from-gray-100 to-gray-300">
-            {/* Header Section */}
-            <header className="bg-blue-700 text-white p-4 shadow-md">
-                <div className="flex justify-between items-center">
-                    <h1 className="text-2xl font-bold">Employee Management</h1>
-                    <button className="bg-blue-900 px-4 py-2 rounded-md hover:bg-blue-800">View Profile</button>
+        <div className="home-container">
+            <header className="header">
+                <div className="header-content">
+                    <h1 className="header-title"> Employee Management </h1>
+                    <button className="profile-button"> View Profile </button>
                 </div>
             </header>
 
-            {/* Main Content Section */}
-            <main className="flex-grow p-6 overflow-y-auto">
-                <div className="text-center mb-6">
-                    <h2 className="text-3xl font-bold text-blue-700">Welcome to the Employee Management System</h2>
-                    <p className="text-gray-600 mt-2">Manage employee details, view reports, and more!</p>
+            <main className="main-content">
+                <div className="welcome-section">
+                    <h2 className="welcome-title">Welcome to the Employee Management System</h2>
+                    <p className="welcome-text">Manage employee details, view tasks, and more!</p>
                 </div>
 
-                {/* Stats Section */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="bg-white shadow-md rounded-lg p-4 text-center">
-                        <h3 className="text-xl font-bold text-gray-700">Total Employees</h3>
-                        <p className="text-3xl text-blue-600 font-semibold mt-2">{employees.length}</p>
+                <div className="stats-section">
+                    <div className="stat-card">
+                        <h3>Total Employees</h3>
+                        <p className="stat-value">{employees.length}</p>
                     </div>
-                    <div className="bg-white shadow-md rounded-lg p-4 text-center">
-                        <h3 className="text-xl font-bold text-gray-700">Active Tasks</h3>
-                        <p className="text-3xl text-green-600 font-semibold mt-2">12</p>
+                    <div className="stat-card">
+                        <h3>Active Tasks</h3>
+                        <p className="stat-value">
+                            {employees.reduce((acc, employee) => acc + employee.tasks.length, 0)}
+                        </p>
                     </div>
                 </div>
 
-                {/* Manage Employees Section */}
-                <div className="mt-8 text-center">
-                    <h3 className="text-2xl font-bold text-gray-700">Manage Employees</h3>
+                <div className="manage-employees">
+                    {/* <h3>Manage Employees</h3> */}
                     <button
-                        className="bg-green-500 text-white px-6 py-2 rounded-md mt-4 hover:bg-green-600"
+                        className="add-employee-button"
                         onClick={() => document.getElementById("addEmployeeModal").showModal()}
                     >
                         Add New Employee
                     </button>
+                    <button
+                        className="add-task-button"
+                        onClick={() => document.getElementById("addTaskModal").showModal()}
+                    >
+                        Add Task to Employee
+                    </button>
                 </div>
 
-                {/* Employee List Section */}
-                <div className="mt-8">
-                    <h3 className="text-xl font-bold text-gray-700">Employee List</h3>
-                    <div className="bg-white shadow-md rounded-lg mt-4 p-4 max-h-64 overflow-y-auto">
-                        <ul className="space-y-2">
-                            {employees.map((employee) => (
-                                <li
-                                    key={employee.id}
-                                    className="p-4 bg-gray-50 rounded-lg shadow hover:shadow-md flex justify-between items-center"
+                <div className="employee-list">
+    <h3>Employee List</h3>
+    <div className="employee-list-container">
+        <table className="employee-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Assigned Tasks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {employees.map((employee) => (
+                    <tr key={employee.id}>
+                        <td>{employee.name}</td>
+                        <td>{employee.position}</td>
+                        <td>
+                            <ul>
+                                {employee.tasks.map((task) => (
+                                    <li key={task.taskId}>
+                                        {task.task} -{" "}
+                                        <span className={task.status === "Complete" ? "task-complete" : "task-incomplete"}>
+                                            {task.status}
+                                        </span>{" "} <br />
+                                        <span className="task-deadline">Deadline: {task.deadline}</span> 
+                                    </li>
+                                ))}
+                            </ul>
+                        </td>
+                        <td>
+                            {employee.tasks.map((task) => (
+                                <button
+                                    key={task.taskId}
+                                    className="mark-task-btn"
+                                    onClick={() => handleMarkTaskComplete(employee.id, task.taskId)}
                                 >
-                                    <span>
-                                        <strong className="text-gray-800">{employee.name}</strong> - {employee.position}
-                                    </span>
-                                </li>
+                                    {task.status === "Complete" ? "Undo" : "Complete"}
+                                </button>
                             ))}
-                        </ul>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+</div>
+
             </main>
 
-            {/* Footer Section */}
-            <footer className="bg-blue-700 text-white text-center py-4">
-                <p>&copy; 2024 Company Name | All rights reserved</p>
-            </footer>
 
-            {/* Add New Employee Modal */}
-            <dialog id="addEmployeeModal" className="rounded-lg shadow-lg p-6 bg-white max-w-md mx-auto">
-                <h3 className="text-2xl font-bold mb-4 text-blue-700">Add New Employee</h3>
+            <dialog id="addEmployeeModal" className="modal">
+                <h3 className="modal-title">Add New Employee</h3>
                 <form onSubmit={handleAddEmployee}>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Name</label>
+                    <div className="input-group">
+                        <label>Name</label>
                         <input
                             type="text"
                             name="name"
                             value={newEmployee.name}
                             onChange={handleInputChange}
-                            className="mt-1 p-2 border rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
                             required
                         />
                     </div>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Position</label>
+                    <div className="input-group">
+                        <label>Position</label>
                         <input
                             type="text"
                             name="position"
                             value={newEmployee.position}
                             onChange={handleInputChange}
-                            className="mt-1 p-2 border rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
                             required
                         />
                     </div>
-                    <div className="flex justify-end">
+                    <div className="modal-buttons">
                         <button
                             type="button"
-                            className="px-4 py-2 bg-red-500 text-white rounded-md mr-2 hover:bg-red-600"
+                            className="cancel-button"
                             onClick={() => document.getElementById("addEmployeeModal").close()}
                         >
                             Cancel
                         </button>
-                        <button
-                            type="submit"
-                            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-                        >
+                        <button type="submit" className="submit-button">
                             Add Employee
+                        </button>
+                    </div>
+                </form>
+            </dialog>
+
+            <dialog id="addTaskModal" className="modal">
+                <h3 className="modal-title">Add Task to Employee</h3>
+                <form onSubmit={handleAddTask}>
+                    <div className="input-group">
+                        <label>Select Employee</label>
+                        <select
+                            name="employeeId"
+                            value={newTask.employeeId}
+                            onChange={handleInputChange}
+                            required
+                        >
+                            <option value="">Select Employee</option>
+                            {employees.map((employee) => (
+                                <option key={employee.id} value={employee.id}>
+                                    {employee.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="input-group">
+                        <label>Task</label>
+                        <input
+                            type="text"
+                            name="task"
+                            value={newTask.task}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="input-group">
+                        <label>Deadline</label>
+                        <input
+                            type="date"
+                            name="deadline"
+                            value={newTask.deadline}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="modal-buttons">
+                        <button
+                            type="button"
+                            className="cancel-button"
+                            onClick={() => document.getElementById("addTaskModal").close()}
+                        >
+                            Cancel
+                        </button>
+
+                        <button type="submit" className="submit-button">
+                            Add Task
                         </button>
                     </div>
                 </form>

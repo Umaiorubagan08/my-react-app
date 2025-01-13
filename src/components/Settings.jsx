@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Settings.css'; // Assuming you have a CSS file for styles
+import './Settings.css'; 
 
-export default function Settings() {
+export default function Settings() { // not correctly working, need to improvement
     const [darkMode, setDarkMode] = useState(false);
     const [notifications, setNotifications] = useState(true);
 

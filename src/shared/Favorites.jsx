@@ -47,7 +47,6 @@ export default function Documents() {
     alert(`Downloading document: ${documentTitle}`);
   };
 
-  // Filtering and sorting
   const filteredDocuments = documents
     .filter(
       (doc) =>
@@ -132,7 +131,7 @@ export default function Documents() {
       display: "flex",
       justifyContent: "center",
       gap: "10px",
-      marginTop: "20px",
+      marginTop: "5px",
     },
     pageButton: {
       padding: "8px 12px",

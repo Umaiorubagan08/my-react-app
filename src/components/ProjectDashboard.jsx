@@ -40,20 +40,20 @@ export default function ProjectDashboard() {
             <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "20px"}}>
                 <thead>
                     <tr style={{ backgroundColor: "#555", color: "black" }}>
-                        <th style={{ border: "1px solid #ccc", padding: "10px" }}>Name</th>
-                        <th style={{ border: "1px solid #ccc", padding: "10px" }}>Project Name</th>
-                        <th style={{ border: "1px solid #ccc", padding: "10px" }}>Action</th>
+                        <th style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center" }}> Team </th>
+                        <th style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center" }}> Project Name</th>
+                        <th style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center" }}> Action </th>
                     </tr>
                 </thead>
                 <tbody>
                     {projects.map((project) => (
                         <tr key={project.id}>
-                            <td style={{ border: "1px solid #ccc", padding: "10px" }}>{project.name}</td>
-                            <td style={{ border: "1px solid #ccc", padding: "10px" }}>{project.projectName}</td>
+                            <td style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center" }}>{project.name}</td>
+                            <td style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center" }}>{project.projectName}</td>
                             <td style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center"}}>
                                 <button
                                     style={{
-                                        padding: "5px 15px", // Increased padding for better button size
+                                        padding: "5px 15px", 
                                         backgroundColor:
                                             project.status === "Complete"
                                                 ? "green"
@@ -65,7 +65,7 @@ export default function ProjectDashboard() {
                                         borderRadius: "5px",
                                         textTransform: "uppercase",
                                         cursor: "pointer",
-                                        fontSize: "1rem" // Optional: Adjust button font size
+                                        fontSize: "1rem" 
                                     }}
                                     onClick={() => handleButtonClick(project)}
                                 >
@@ -78,7 +78,7 @@ export default function ProjectDashboard() {
             </table>
 
             <footer style={{ marginTop: "20px", textAlign: "center" }}>
-                <p>&copy; 2024 EmpHub | All rights reserved</p>
+                <p>&copy; 2025 EmpHub | All rights reserved</p>
             </footer>
         </div>
     );

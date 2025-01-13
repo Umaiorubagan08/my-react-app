@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "./Table"; // Ensure Table component is working fine
+import Table from "./Table"; 
 
 export default function Dashboard() {
     console.log("Rendering Dashboard component");
